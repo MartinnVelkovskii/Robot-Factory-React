@@ -2,37 +2,387 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.padding-5px {
+  padding: 0 200px 0 200px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.headContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* margin: 2%; */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.hStyle {
+  color: #063378;
+}
+
+.logoStyle {
+  width: 200px;
+}
+
+#slide-1.factory-section {
+  border: 1px solid black;
+  background-color: #fefce0;
+}
+
+.robot-title-box {
+  display: flex;
+  align-items: stretch;
+}
+
+.robot-title-heading {
+  width: 30%;
+  border-bottom: 1px solid black;
+  display: inline-block;
+  text-align: center;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-top: 35px solid transparent;
+  border-bottom: 35px solid transparent;
+  border-right: 30px solid black;
+  position: relative;
+  right: 30px;
+}
+
+.triangle-empty {
+  width: 0;
+  height: 0;
+  border-top: 33px solid transparent;
+  border-bottom: 33px solid transparent;
+  border-right: 28px solid #fefce0;
+  position: absolute;
+  top: -33px;
+  right: -30.2px;
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0 40px 20px;
+}
+
+.content-wrapper .left-side,
+.content-wrapper .right-block {
+  background-color: white;
+}
+
+.left-side {
+  width: 30%;
+  height: 350px;
+  border: 1px solid black;
+  position: relative;
+}
+
+.robot {
   display: flex;
   flex-direction: column;
+  position: relative;
+  margin-top: 20px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.md-parts {
+  display: flex;
+position: relative;
+height: 110px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.robot-head {
+  width: 70px;
+  height: 70px;
+  border: 1px solid black;
+  border-radius: 50%;
+  margin: 5px 0 5px 0px;
+  position: relative;
+}
+
+.left-eye {
+  width: 14px;
+  height: 14px;
+  border: 1px solid black;
+  border-radius: 50%;
+  position: absolute;
+  left: 9px;
+  top: 15px;
+}
+
+.right-eye {
+  width: 14px;
+  height: 14px;
+  border: 1px solid black;
+  border-radius: 50%;
+  position: absolute;
+  left: 46px;
+  top: 15px;
+}
+
+.mouth {
+  width: 35px;
+  height: 6px;
+  border-radius: 100px / 50px;
+  border: 1px solid;
+  position: absolute;
+  bottom: 13px;
+  left: 18px;
+  transform: rotateX(180deg);
+}
+
+.female-robot-body {
+  border-bottom: 110px solid;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  height: 0;
+  width: 70px;
+  z-index: 3;
+}
+
+.male-robot-body {
+  border-bottom: 110px solid;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  height: 0;
+  width: 70px;
+  transform: rotateX(180deg); 
+  z-index: 3;
+}
+
+.arms {
+  width: 16px;
+  height: 80px;
+  border: 1px solid black;
+  margin-top: 8px;
+  background-color: lightgrey;
+  border-radius: 5px;
+  position: relative;
+}
+
+.down-parts {
+  display: flex;
+  position: relative;
+  height: 60px;
+}
+
+.legs {
+  width: 16px;
+  height: 60px;
+  border: 1px solid black;
+  position: relative;
+  margin: 0  17px;
+}
+
+
+.robot-name {
+  text-align: center;
+  margin: 20px;
+  font-size: larger;
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin-left: 25px;
+}
+
+.right-block {
+  border: 1px solid black;
+}
+
+.right-block p {
+  margin: 10px;
+}
+
+.right-block:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.right-block.first {
+  margin-right: 3%;
+}
+
+.right-block.second {
+  margin-right: 6%;
+}
+
+.right-block.third {
+  margin-right: 9%;
+  display: flex;
+  animation: fadein 2s;
+}
+
+.good-luck-image {
+  width: 60px;
+}
+
+#slide-2.create-robot-section {
+  margin-top: 30px;
+  border: 1px solid black;
+  background-color: #dfedd6;
+}
+
+.create-robot-title {
+  text-align: center;
+  font-size: 24px;
+  padding: 10px 0;
+}
+
+.form-container {
+  padding: 20px;
+}
+
+.create-robot-label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-style {
+  padding: 6px 15px;
+  border-radius: 3px;
+}
+
+.select-style {
+  padding: 6px 100px 6px 1px;
+  border-radius: 3px;
+}
+
+.color-style {
+  width: 100%;
+  padding: 0px 6px 0 6px;
+  border-radius: 3px;
+}
+
+.text-area-style {
+  text-align: center;
+  padding: 17px 0;
+}
+
+.input-fileds {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons {
+  padding-top: 10px;
+}
+
+.first-button {
+  padding: 6px 30px;
+  border-radius: 3px;
+}
+
+.second-button {
+  padding: 6px 20px;
+  border-radius: 3px;
+  margin-left: 10px;
+}
+
+.empty-section {
+  height: 150px;
+}
+.error-message{
+  color: red;
+  display: block;
+  padding-top: 5px;
+}
+
+.mouth.talk{
+  animation-name: talk;
+  animation-duration: 1s;
+  animation-iteration-count: 10;
+
+}
+@keyframes talk {
+  0%   {height: 5px;}
+  50%  {height: 0;}
+}
+
+.legs.jump{
+  animation-name: jump;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes jump {
+  0%   {top: -30px;}
+  50%  {top: 0;}
+
+}
+
+.right-eye.blink{
+  animation-name: blink;
+  transform-origin: 50%;
+  animation: blink 2s infinite;
+}
+
+
+@keyframes blink {
+  0%, 100% {
+      transform: scale(1, .05);
   }
-  to {
-    transform: rotate(360deg);
+  5%,
+  95% {
+      transform: scale(1, 1);
   }
+}
+
+
+.bubble {
+  position: relative;
+  width: 220px;
+  text-align: center;
+  line-height: 1.2em;
+  margin: 20px auto;
+  background-color: #fff;
+  border: 1px solid #333;
+  border-radius: 100px;
+  font-family: sans-serif;
+  padding: 10px;
+  font-size: large;
+}
+
+.speech:after {
+  left: 31px;
+  bottom: -48px;
+  border: 25px solid;
+  border-color: #fff transparent transparent #fff;
+}
+
+.bubble:before, .bubble:after {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.speech:before {
+  left: 30px;
+  bottom: -50px;
+  border: 25px solid;
+  border-color: #333 transparent transparent #333;
+}
+
+.bubble-position{
+  position: absolute;
+  left: 7rem;
+  top: -4rem;
+}
+
+.d-none{
+  display: none;
+}
+
+.buttons-holder{
+  text-align: center;
+  margin: 2rem;
+}
+
+.buttons-holder button{
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border-radius: 3px;
 }
